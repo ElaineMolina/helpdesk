@@ -17,16 +17,12 @@ export class TecnicoListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
   dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
 
-  constructor(private service: TecnicoService){}
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  constructor(private service: TecnicoService) { }
 
   ngOnInit(): void {
     this.findAll();
-  }
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
   }
 
   findAll() {
@@ -40,7 +36,7 @@ export class TecnicoListComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  }  
+  }
 }
 
 
