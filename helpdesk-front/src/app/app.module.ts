@@ -22,16 +22,20 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
+import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 import { SharedModule } from './shared/shared.module';
-import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
-import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
     LoginComponent,
     TecnicoCreateComponent,
     TecnicoUpdateComponent,
-    TecnicoDeleteComponent
+    TecnicoDeleteComponent,
+    ClienteCreateComponent,
+    ClienteDeleteComponent,
+    ClienteListComponent,
+    ClienteUpdateComponent
   ],
   imports: [
     BrowserModule,
