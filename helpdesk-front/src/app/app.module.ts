@@ -37,6 +37,7 @@ import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecn
 import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 import { SharedModule } from './shared/shared.module';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-
     ClienteDeleteComponent,
     ClienteListComponent,
     ClienteUpdateComponent,
-    ChamadoListComponent
+    ChamadoListComponent,
+    ChamadoCreateComponent
   ],
   imports: [
     BrowserModule,
